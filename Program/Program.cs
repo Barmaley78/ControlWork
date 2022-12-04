@@ -51,16 +51,10 @@ string[] InitResultArray(string[] inputArray, int n)
 
 void PrintArray(string[] tempArray)
 {
-    int k = 0;
-    int s = tempArray.GetLength(0);
     Console.Write("[");
     for (int i = 0; i < tempArray.GetLength(0); i++)
     {
-        if (k < s - 1)
-        {
-            Console.Write($"\"{tempArray[i]}\", ");
-            k++;
-        }
+        if (i < tempArray.GetLength(0) - 1) Console.Write($"\"{tempArray[i]}\", ");
         else Console.Write($"\"{tempArray[i]}\"");
     }
     Console.WriteLine("]");
